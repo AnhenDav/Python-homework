@@ -26,3 +26,5 @@ output_data = output_stream.getvalue()
 # побайтово записываем новое изображение
 with open('changed_cat_photo.jpeg', 'wb') as f:
     f.write(output_data)
+
+
