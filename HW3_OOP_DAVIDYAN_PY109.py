@@ -32,6 +32,7 @@ class Analyser:
                 print('Результат по числу (произведение чётных на длину строки):', even * self.len_phrase())
 
             elif i.isalpha():
+                i = str(i)
                 for letter in i:
                     letter = letter.lower()
                     if letter in all_vowels:
@@ -40,10 +41,10 @@ class Analyser:
                     else:
                         consonants += 1
                         consonants_str += letter + ' '
-                if vowels * consonants <= self.len_phrase():
-                    print('Результат по строке (все гласные буквы в предложении):', vowels_str)
-                else:
-                    print('Результат по строке (все негласные буквы в предложении):', consonants_str)
+        if vowels * consonants <= self.len_phrase():
+            print('Результат по строке (все гласные буквы в предложении):', vowels_str)
+        else:
+            print('Результат по строке (все негласные буквы в предложении):', consonants_str)
 
 
 
